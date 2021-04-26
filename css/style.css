@@ -207,7 +207,9 @@ h5,
   right: 0;
   left: 0;
   top: 0;
-  background: rgba(51,51,51) !important;
+  background: rgb(133, 113, 97) !important;
+  background: rgb(45,45,45) !important;
+  background: white !important;
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   margin-top: 0px;
@@ -252,16 +254,81 @@ h5,
 .urasie-navbar-light.scrolled .nav-link {
   padding-top: 0.7rem !important;
   padding-bottom: 0.7rem !important;
-  color: #fff !important;
+  color: #000 !important;
+}
+.urasie-navbar-light.scrolled .navbar-brand {
+  color: #000 !important;
+}
+.urasie-navbar-light .icon-menu {
+  color: lightgray;
+  font-size: 2rem;
+}
+.urasie-navbar-light.scrolled .icon-menu {
+  color: #000;
 }
 
 .navbar-brand {
   font-weight: 900;
   font-size: 20px;
 }
-
+.bright-icon {
+  color: white;
+}
 .dark-icon {
   color: rgb(51, 51, 51);
+}
+
+.py-1 a {
+  font-weight: bold;
+}
+
+.business-card {
+  background-color: rgb(245,245,245);
+  color: black;
+  padding: 1em;
+  border-radius: 25px;
+  border-style: dashed;
+  border-color: rgba(45,45,45);
+}
+@media (max-width: 767.98px) {
+  .business-card {
+    background-color: rgb(245,245,245);
+    color: black;
+    padding: 1em;
+    border-radius: 0px;
+    border-style: none;
+    border-color: rgba(45,45,45);
+  }
+}
+.business-card .title {
+  color: rgba(45,45,45);
+  font-weight: bold;
+}
+.business-card p {
+  font-size: 1.0rem !important;
+  color: rgba(45,45,45) !important;
+}
+.business-card ul {
+  margin: 0;
+}
+
+.show-on-medium-device {
+  display:none;
+}
+
+@media (max-width: 991.98px) {
+  .show-on-medium-device {
+    display: block;
+  }
+  .hide-on-medium-device {
+    display: none;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hide-on-small-device {
+    display: none;
+  }
 }
 
 .hero-wrap {
@@ -320,6 +387,7 @@ h5,
 }
 .owl-carousel .owl-item.active {
   opacity: 1;
+  touch-action: auto;
 }
 .owl-carousel .owl-nav {
   position: absolute;
@@ -385,7 +453,7 @@ h5,
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgb(153, 134, 117);
+  background: #000;
   opacity: 0.7;
 }
 .owl-carousel.home-slider .slider-item .slider-text {
@@ -757,40 +825,6 @@ h5,
   }
 }
 
-.services {
-  width: 100%;
-  display: block;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  border-radius: 2px;
-}
-.services .icon {
-  line-height: 1.3;
-  position: relative;
-  margin: 0 auto;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  border-radius: 50%;
-}
-.services .icon span {
-  font-size: 54px;
-  color: rgb(163, 44, 44);
-}
-.services .media-body h3 {
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 1.2;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
 .urasie-search {
   position: relative;
   width: 100%;
@@ -902,9 +936,22 @@ h5,
   padding: 30px 20px;
   border: 1px solid #e6e6e6;
 }
+
+.menus .table-text {
+  width: 60%;
+  padding: 12px 8px 0px 8px;
+  border: 1px solid #e6e6e6;
+}
 @media (max-width: 767.98px) {
   .menus .text {
     width: 100%;
+  }
+  .menus .table-text {
+    width: 100%;
+    padding: 0px 8px 0px 8px;
+  }
+  .menus .table-text h4 {
+    margin: 0;
   }
 }
 .menus .text .one-half {
@@ -928,7 +975,7 @@ h5,
   font-size: 16px !important;
   line-height: 1.0 !important;
 }
-.menus .text .price {
+.menus .text .price, .menus .table-text .price {
   font-size: 20px;
   color: rgb(163, 44, 44);
   font-weight: 600;
@@ -1195,13 +1242,10 @@ textarea.form-control {
   padding-bottom: 0;
 }
 
-.urasie-bg-dark {
-  background: #3c312e;
-}
-
 .urasie-footer {
   font-size: 14px;
-  background: #141313;
+  background: rgb(133, 113, 97);
+  background: rgb(45,45,45);
   padding: 6em 0;
 }
 .urasie-footer .urasie-footer-logo {
@@ -1218,9 +1262,19 @@ textarea.form-control {
 .urasie-footer .urasie-footer-widget ul li a span {
   color: #fff;
 }
-.urasie-footer .urasie-footer-widget .open-hours li span {
+.urasie-footer .urasie-footer-widget .open-hours span {
   width: 100%;
   color: rgba(255, 255, 255, 0.7);
+}
+.urasie-footer .urasie-footer-widget .open-hours .col-sm-7 {
+  padding-left: 15px;
+  padding-bottom: 0px;
+}
+@media (max-width: 767.98px) {
+  .urasie-footer .urasie-footer-widget .open-hours .col-sm-7 {
+    padding-left: 15px;
+    padding-bottom: 15px;
+  }
 }
 .urasie-footer .urasie-footer-widget .thumb a.thumb-menu {
   width: 100%;
